@@ -1,19 +1,4 @@
-body{
-    background-color: cadetblue;
-}
 
 .card{
     width: 4rem;
-    height: 4rem;
-    border: 1px solid black;
-}
-
-.fs-2{
-    font-size: 5rem;
-    color: bisque;
-}
-
-.d-flex-jc{
-    display: flex;
-    justify-content: center;
 }

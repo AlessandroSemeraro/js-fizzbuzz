@@ -1,13 +1,36 @@
+const wrapperElement = document.querySelector('div.wrapper');
 
-//CICLO
-for (let i=1; i <= 100; i=i+1) {
-  if (i % 15 == 0 ) console.log ("FizzBuzz");
-  
-  else if (i % 3 == 0 ) console.log ("Fizz");
+for (let i = 1; i <= 100 ; i++ ){
+    const fizzBuzzElement = document.createElement('article');
+    fizzBuzzElement.className = 'card';
 
-  else if (i % 5 == 0 ) console.log ("Buzz");
+    fizzBuzzElement.addEventListener('click', function(){
+        fizzBuzzElement.classList.toggle('active');
+      
+    });
 
-  else console.log(i);
-    
+    if ( i % 15 === 0){
+        fizzBuzzElement.append('fizzbuzz');
+        fizzBuzzElement.classList.add('bg-warning');
+        fizzBuzzElement.classList.add('rounded-4');
+        fizzBuzzElement.classList.add('text-center');
+
+    } else if (i % 3 === 0){
+        fizzBuzzElement.append('fizz');
+        fizzBuzzElement.classList.add('bg-success');
+        fizzBuzzElement.classList.add('rounded-4');
+        fizzBuzzElement.classList.add('text-center');
+    } else if (i % 5 === 0) {
+        fizzBuzzElement.append('buzz');
+        fizzBuzzElement.classList.add('bg-primary');
+        fizzBuzzElement.classList.add('rounded-4');
+        fizzBuzzElement.classList.add('text-center');
+    } else {
+        fizzBuzzElement.append(i);
+        fizzBuzzElement.classList.add('bg-danger');
+        fizzBuzzElement.classList.add('rounded-4');
+        fizzBuzzElement.classList.add('text-center');
+    }
+
+    wrapperElement.appendChild(fizzBuzzElement);
 }
-
